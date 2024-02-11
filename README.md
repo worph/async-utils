@@ -5,7 +5,7 @@ A TypeScript library providing utility classes and functions to simplify working
 ## Installation
 
 ```bash
-yarn add worph/async-utils
+yarn add github:worph/async-utils#main
 ```
 
 ## Features
@@ -21,7 +21,7 @@ yarn add worph/async-utils
 ### Lazy Initialization
 
 ```typescript
-import { Lazy } from "worph/async-utils";
+import { Lazy } from "@worph/async-utils";
 
 const lazyValue: Lazy<number> = async () => {
   // some asynchronous operation
@@ -47,7 +47,7 @@ cleaner.cleanUp();
 ### Promise Queue
 
 ```typescript
-import { PromiseQueue } from "worph/async-utils";
+import { PromiseQueue } from "@worph/async-utils";
 
 const queue = new PromiseQueue<number>();
 
@@ -63,7 +63,7 @@ queue.awaitQueueEmpty().then(() => console.log("Queue empty"));
 ### Multi Queue
 
 ```typescript
-import { MultiQueue } from "worph/async-utils";
+import { MultiQueue } from "@worph/async-utils";
 
 const multiQueue = new MultiQueue<number>(2); // 2 concurrent tasks
 
@@ -81,7 +81,7 @@ multiQueue.awaitQueueEmpty().then(() => console.log("All queues empty"));
 ### Generating an ID
 
 ```typescript
-import { makeid } from "worph/async-utils";
+import { makeid } from "@worph/async-utils";
 
 const id = makeid(10); // Generates a random 10 character string
 console.log(id);
